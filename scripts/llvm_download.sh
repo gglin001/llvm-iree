@@ -10,9 +10,10 @@ git remote add origin git@github.com:llvm/llvm-project.git
 ######
 
 git sparse-checkout set --no-cone \
-  /cmake /llvm /mlir \
+  /cmake /llvm /mlir /lld /clang \
   '!/llvm/test' '!/llvm/unittests' '!/llvm/docs' \
   '!/mlir/test' '!/mlir/unittests' '!/mlir/docs' \
+  '!/clang/test' '!/clang/unittests' '!/clang/docs' \
   /.vscode '/*.*'
 
 git sparse-checkout add \
@@ -33,12 +34,5 @@ git fetch --depth 1 origin $LLVM_SHA
 git checkout $LLVM_SHA
 
 popd
-
-###############################################################################
-
-# log
-
-# du -hs llvm-project
-# 439M    llvm-project
 
 ###############################################################################
