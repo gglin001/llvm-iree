@@ -10,7 +10,7 @@ cmake --preset osx -S$PWD/llvm -B$PWD/build
 # TODO: reduce cmake targets, only llvm & mlir libs
 
 cmake --build $PWD/build --target all
-cmake --build $PWD/build --target install
+# cmake --build $PWD/build --target install
 
 popd
 
