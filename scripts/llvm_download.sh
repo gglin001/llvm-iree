@@ -14,7 +14,8 @@ git sparse-checkout set --no-cone \
   '!/llvm/test' '!/llvm/unittests' '!/llvm/docs' \
   '!/mlir/test' '!/mlir/unittests' '!/mlir/docs' \
   '!/clang/test' '!/clang/unittests' '!/clang/docs' \
-  /.vscode '/*.*'
+  '/third-party/siphash' \
+  /.vscode '/*.*' '!/.ci' '!/.github'
 
 git sparse-checkout add \
   '!/llvm/utils/gn' \
